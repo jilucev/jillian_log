@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container" id="body-container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+        <!-- arranges to insert a div tag for each element in the flash with a css class indicating the type of message. For example 'alert alert-success.' Even though the hash key is a symbol, erb converts it into a string before inserting it
+        into the template -->
+      <% end %>
+      <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%#= debug(params) if Rails.env.development? %>
+    </div>
+  </body>
+</html>

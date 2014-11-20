@@ -1,0 +1,12 @@
+.show-outline-container
+  %h2.outline-title
+    = @outline.title
+  %h4.created
+    =@created_time
+    =@created
+  %p.outline-log
+    = simple_format(@outline.log)
+
+=link_to 'Tweak this', edit_outline_path(@outline)
+- if current_user
+  =link_to "view all #{current_user.name} logs", outlines_path

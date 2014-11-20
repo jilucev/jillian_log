@@ -1,0 +1,12 @@
+.form-container
+  = form_for @outline do |f|
+    %p.form-label
+      = f.label :title
+    %p.form-input
+      = f.text_field :title
+    %p.form-label
+      = f.label :log
+    %p.form-input
+      = f.text_area :log
+    %br
+      = f.submit

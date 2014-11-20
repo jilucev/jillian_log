@@ -1,0 +1,12 @@
+%h1 Sign in
+.row
+  .span6.offset3
+    = form_for(:session, url: sessions_path) do |f|
+      / we can't just pass the @session instance variable to the form_for object because we don't have a session model, and we therefore have to give our form slightly more information. Here, we are telling the form to POST to the sessions create path on send. We don't have the convention of an action method that corresponds to a model. Because this form doesn't correspond as easily as usual to an instance of a model which is handled by a corresponding controller rendering a corresponding view, form_tag might be even better.
+      = f.label :email
+      = f.text_field :email
+      = f.label :password
+      = f.password_field :password
+      = f.submit "Sign in", class: "btn btn-large btn-primary"
+    %p
+      New user? #{link_to "Sign up now!", signup_path}

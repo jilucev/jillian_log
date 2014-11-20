@@ -1,0 +1,10 @@
+.center.hero-unit
+  %h1
+    - if current_user
+      Welcome to your logs, #{current_user.name}
+  = link_to "Need to sign up?", signup_path, class: "btn btn-large btn-primary"
+  %p
+    = link_to "New log", new_outline_path
+  %p
+    - if current_user
+      = link_to "see all #{current_user.name} logs", outlines_path

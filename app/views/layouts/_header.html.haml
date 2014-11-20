@@ -1,0 +1,10 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      = link_to 'home', root_path, id: "logo"
+      %nav
+        - if signed_in?
+          = link_to "Sign out, #{current_user.name}", signout_path, method: "delete"
+        - else
+          %li= link_to "Sign in", signin_path
+/ here, current_user is being converted into user_path(current_user)
