@@ -7,3 +7,22 @@ textarea {
 input {
   padding: 3px;
 }
+
+#work-mode-div {
+  height: 100px;
+  width: 100px;
+  background: red;
+}
+
+.outlines-form {
+  visibility: default;
+}
+
+.outlines-form-discreet {
+  textarea {
+    padding: 0px;
+    height: 50px;
+    width: 150px;
+
+  }
+}

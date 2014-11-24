@@ -1,6 +1,10 @@
 - if current_user
   = link_to "new #{current_user.name} log", new_outline_path
 
+
+#work-mode-div
+= check_box_tag('work-mode', value = '1', checked = false, :onclick => "$('#work-mode-div').toggle()")
+
 %table
   %tr
     %th
