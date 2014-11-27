@@ -1,18 +1,22 @@
+$lightGray: #f1f1f1;
+$mediumGray: #C3C3C7;
+
 textarea {
   height: 300px;
   width: 850px;
   padding: 15px;
+  font-size: 1em;
 }
 
 input {
   padding: 3px;
 }
 
-#work-mode-div {
-  height: 100px;
-  width: 100px;
-  background: red;
-}
+// #work-mode-div {
+//   height: 100px;
+//   width: 100px;
+//   background: red;
+// }
 
 .outlines-form {
   visibility: default;
@@ -23,6 +27,58 @@ input {
     padding: 0px;
     height: 50px;
     width: 150px;
-
+    font-size: .7em;
   }
 }
+
+a {
+  background-color: $lightGray;
+  color: rgba(0,0,0,0.6);
+  text-shadow: none;
+  margin: 15px;
+  padding: 15px;
+  text-decoration: none;
+    &:hover {
+    background: black;
+    color: white;
+    text-shadow: none
+    }
+}
+
+td {
+  padding: 20px;
+}
+
+p, h1, h2, h3, h4, td, th, a, textarea {
+font-family: "AtlasTypewriterRegular",
+             "Andale Mono",
+             "Consolas",
+             "Lucida Console",
+             "Menlo",
+             "Luxi Mono";
+}
+
+#navbar {
+  min-height: 45px;
+  background-color: black;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 30px;
+  a {
+    background-color: black;
+    color: white;
+    padding: 0;
+    font-size: 1.3em;
+    &:hover {
+      background-color: black;
+      color: $mediumGray;
+    }
+  }
+}
+
+    .home, .sign-out, .new, .sign-in {
+      margin: 0, 15px;
+    }

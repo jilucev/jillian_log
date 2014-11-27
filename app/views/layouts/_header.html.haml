@@ -1,10 +1,17 @@
-%header.navbar.navbar-fixed-top.navbar-inverse
-  .navbar-inner
-    .container
-      = link_to 'home', root_path, id: "logo"
-      %nav
-        - if signed_in?
-          = link_to "Sign out, #{current_user.name}", signout_path, method: "delete"
-        - else
-          %li= link_to "Sign in", signin_path
+/ %header.navbar.navbar-fixed-top.navbar-inverse
+/   .navbar-inner
+/     .container
+/       = link_to 'home', root_path, id: "logo"
+/       %nav
+/         - if signed_in?
+/           = link_to "Sign out, #{current_user.name}", signout_path, method: "delete"
+/         - else
+/           %li= link_to "Sign in", signin_path
 / here, current_user is being converted into user_path(current_user)
+#navbar
+  =link_to 'home', root_path, id: "logo", class: 'home'
+  - if signed_in?
+    %span=link_to "Sign out, #{current_user.name}", signout_path, method: "delete", class: 'sign-out'
+    %span=link_to "new #{current_user.name} log", new_outline_path, class: 'new'
+  - else
+    %span=link_to "Sign in", signin_path, class: 'sign-in'

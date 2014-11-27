@@ -7,6 +7,6 @@
   %p.outline-log
     = simple_format(@outline.log)
 
-=link_to 'Tweak this', edit_outline_path(@outline)
+=link_to 'Tweak this', edit_outline_path(@outline), class: 'show-tweak'
 - if current_user
-  =link_to "view all #{current_user.name} logs", outlines_path
+  =link_to "view all #{current_user.name} logs", outlines_path, class: 'show-logs-index'
