@@ -8,6 +8,10 @@ textarea {
   font-size: 1em;
 }
 
+.form-input {
+  margin-bottom: 0;
+}
+
 input {
   padding: 3px;
 }
@@ -35,7 +39,7 @@ a {
   background-color: $lightGray;
   color: rgba(0,0,0,0.6);
   text-shadow: none;
-  margin: 15px;
+  margin-bottom: 15px;
   padding: 15px;
   text-decoration: none;
     &:hover {
@@ -44,6 +48,52 @@ a {
     text-shadow: none
     }
 }
+
+#save-button {
+  border: none;
+  background-color: $lightGray;
+  color: rgba(0,0,0,0.6);
+  text-shadow: none;
+  text-decoration: none;
+  font-family: "AtlasTypewriterRegular",
+             "Andale Mono",
+             "Consolas",
+             "Lucida Console",
+             "Menlo",
+             "Luxi Mono";
+  margin-bottom: 32px;
+  padding: 18px;
+  font-size: 1em;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.form-button-div {
+  height: 48px;
+  .form-back-button, #stealth-button {
+    border: none;
+    background-color: $lightGray;
+    color: rgba(0,0,0,0.6);
+    text-shadow: none;
+    text-decoration: none;
+    font-family: "AtlasTypewriterRegular",
+               "Andale Mono",
+               "Consolas",
+               "Lucida Console",
+               "Menlo",
+               "Luxi Mono";
+    margin-bottom: 32px;
+    padding: 18px;
+    font-size: 1em;
+    &:hover {
+      background-color: black;
+      color: white;
+  }
+  }
+}
+
 
 td {
   padding: 20px;
@@ -79,6 +129,38 @@ font-family: "AtlasTypewriterRegular",
   }
 }
 
-    .home, .sign-out, .new, .sign-in {
-      margin: 0, 15px;
-    }
+.home, .sign-out, .new, .sign-in {
+  margin: 0, 15px;
+}
+
+.home-header {
+  margin-top: 65px;
+}
+.home-dashboard {
+  margin-top: 48px;
+}
+.home-signup-btn {
+
+}
+.home-new-link {
+
+}
+.home-index-link {
+
+}
+
+
+
+
+.index-table-head {
+  margin-top: 65px;
+}
+// #index-table-body {
+//   margin-top: 30px;
+// }
+.page-container {
+  padding-top: 47px;
+}
+.page-container-index {
+  padding-top: 16px;
+}

@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def index
     @user = set_username
+    @get_user = User.find(params[:id])
+    @outlines = @get_user.outlines
     # @users = User.paginate(page: params[:page])
     #paginate takes a hash argument with key :page and a value eq to the page number
     #User.paginate defaults to pull 30 users out of the database at a time based on
@@ -72,13 +74,6 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to(root_url) unless current_user.admin?
-    end
-
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: 'Please sign in.' unless signed_in?
-      end
     end
 
     def correct_user

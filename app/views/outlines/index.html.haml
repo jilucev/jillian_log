@@ -3,19 +3,22 @@
 
 / #work-mode-div
 / =# check_box_tag('work-mode', value = '1', checked = false, :onclick => "$('#work-mode-div').toggle()")
-%i.fa.fa-bicycle
-%table
-  %tr
-    %th
-      #{current_user.name} logs
+.page-container-index
+  %i.fa.fa-bicycle
+  %table.index-table-head
+    %tr
+      %th
+        = link_to "Back", root_path, class: 'index-back'
+        =link_to "New", new_outline_path, class: 'new'
 
-    - @outlines.each do |outline|
-      %tr
-        %td=(outline.created_at).strftime("%b %d")
-        %td= outline.title
-        %td= link_to 'Read', outline_path(outline)
-        %td= link_to 'Tweak', edit_outline_path(outline)
-        %td= link_to 'Destroy', outline_path(outline),
-                    method: :delete, data: {confirm: "Are you sure you want to delete this #{current_user.name} log?"}
-
-= link_to "Back", root_path
+        #{current_user.name} logs, [#{current_user.outlines.count}]
+        / last updated =time_ago_in_words(@outline.last.created_at)
+    %tr
+      - @outlines.each do |outline|
+        %tr
+          %td=(outline.created_at).strftime("%b %d")
+          %td= outline.title
+          %td= link_to 'Read', outline_path(outline)
+          %td= link_to 'Tweak', edit_outline_path(outline)
+          %td= link_to 'Destroy', outline_path(outline),
+                      method: :delete, data: {confirm: "Are you sure you want to delete this #{current_user.name} log?"}

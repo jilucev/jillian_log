@@ -1,10 +1,15 @@
-%h1 Tweak this:
-
-%span stealth mode
-= check_box_tag('work-mode', value = '1', checked = false, :onclick => "$('#outlines-form').toggleClass('outlines-form outlines-form-discreet')")
+.page-container
+  %h1 Tweak this:
+  / =# check_box_tag('work-mode', value = '1', checked = false, :onclick => "$('#outlines-form').toggleClass('outlines-form outlines-form-discreet')")
 
 #outlines-form.outlines-form
   = render 'outlines_form'
+:javascript
+
+  $(document).ready(function(){
+    $('#stealth-button').click(function(){
+        $('#outlines-form').toggleClass("outlines-form outlines-form-discreet");
+    });
+  });
 
 
-= link_to 'Back', outlines_path

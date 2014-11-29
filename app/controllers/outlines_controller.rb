@@ -1,6 +1,7 @@
 class OutlinesController < ApplicationController
   def index
-    @outlines = Outline.all
+    @outlines = current_user.outlines
+    # @outlines = Outline.all
   end
 
   def new
@@ -8,7 +9,9 @@ class OutlinesController < ApplicationController
   end
 
   def create
-    @outline = Outline.new(outline_params)
+    @outline = current_user.outlines.build(outline_params)
+
+    # @outline = Outline.new(outline_params)
     if @outline.save
       redirect_to :root
     else

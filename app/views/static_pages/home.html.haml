@@ -1,10 +1,9 @@
 .center.hero-unit
-  %h1
+  %h1.home-header
     - if current_user
       Welcome to your logs, #{current_user.name}
-  = link_to "Need to sign up?", signup_path, class: "btn btn-large btn-primary"
-  %p
-    = link_to "New log", new_outline_path
-  %p
+  .home-dashboard
+    = link_to "Need to sign up?", signup_path, class: "home-signup-btn"
+    = link_to "New log", new_outline_path, class: "home-new-link"
     - if current_user
-      = link_to "see all #{current_user.name} logs", outlines_path
+      = link_to "see all #{current_user.name} logs", outlines_path, class: "home-index-link"

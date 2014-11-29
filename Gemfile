@@ -17,6 +17,9 @@ gem 'sass'
 gem 'pry'
 gem 'actionmailer'
 gem 'bcrypt'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
