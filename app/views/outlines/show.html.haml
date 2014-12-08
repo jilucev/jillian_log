@@ -1,12 +1,22 @@
 .page-container
+  %button#show-stealth-button{:title => "button"} Stealth
   %h2.outline-title
     = @outline.title
   %h4.created
     =@created_time
     =@created
-  %p.outline-log
+  #outline-log.outline-log
     = simple_format(@outline.log)
+  .show-buttons
+    =link_to 'Tweak this', edit_outline_path(@outline), class: 'show-tweak'
+    - if current_user
+      =link_to "Back", outlines_path, class: 'show-logs-index'
 
-=link_to 'Tweak this', edit_outline_path(@outline), class: 'show-tweak'
-- if current_user
-  =link_to "view all #{current_user.name} logs", outlines_path, class: 'show-logs-index'
+
+:javascript
+
+  $(document).ready(function(){
+    $('#show-stealth-button').click(function(){
+        $('#outline-log').toggleClass("outline-log outline-log-discreet");
+    });
+  });

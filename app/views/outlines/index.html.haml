@@ -16,6 +16,7 @@
     %tr
       - @outlines.each do |outline|
         %tr
+          %td=(current_user.outlines.count)
           %td=(outline.created_at).strftime("%b %d")
           %td= outline.title
           %td= link_to 'Read', outline_path(outline)

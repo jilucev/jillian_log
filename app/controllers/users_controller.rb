@@ -86,8 +86,10 @@ class UsersController < ApplicationController
     end
 
     def set_username
+      if @user
       @user = User.find(params[:id])
       @username = @user.name
+      end
     end
     #note that admin is not a permitted attribute. This is what prevents users from
     #assigning themselves admin status.

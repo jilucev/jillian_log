@@ -72,6 +72,7 @@ a {
 
 .form-button-div {
   height: 48px;
+}
   .form-back-button, #stealth-button {
     border: none;
     background-color: $lightGray;
@@ -92,7 +93,26 @@ a {
       color: white;
   }
   }
-}
+  #show-stealth-button {
+    border: none;
+    background-color: $lightGray;
+    color: rgba(0,0,0,0.6);
+    text-shadow: none;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: "AtlasTypewriterRegular",
+               "Andale Mono",
+               "Consolas",
+               "Lucida Console",
+               "Menlo",
+               "Luxi Mono";
+    padding: 18px;
+    font-size: 1em;
+    &:hover {
+      background-color: black;
+      color: white;
+  }
+  }
 
 
 td {
@@ -122,15 +142,13 @@ font-family: "AtlasTypewriterRegular",
     color: white;
     padding: 0;
     font-size: 1.3em;
+    margin-left: 20px;
+    margin-top: 3px;
     &:hover {
       background-color: black;
       color: $mediumGray;
     }
   }
-}
-
-.home, .sign-out, .new, .sign-in {
-  margin: 0, 15px;
 }
 
 .home-header {
@@ -148,10 +166,6 @@ font-family: "AtlasTypewriterRegular",
 .home-index-link {
 
 }
-
-
-
-
 .index-table-head {
   margin-top: 65px;
 }
@@ -159,8 +173,20 @@ font-family: "AtlasTypewriterRegular",
 //   margin-top: 30px;
 // }
 .page-container {
-  padding-top: 47px;
+  padding: 47px, 15px;
+  margin-top: 65px;
+}
+.show-buttons {
+  padding-top: 20px;
 }
 .page-container-index {
   padding-top: 16px;
 }
+.outlines-form {
+  color: default;
+}
+.outline-log-discreet {
+  color: $lightGray;
+}
+
+
