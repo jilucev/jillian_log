@@ -14,9 +14,9 @@
         #{current_user.name} logs, [#{current_user.outlines.count}]
         / last updated =time_ago_in_words(@outline.last.created_at)
     %tr
-      - @outlines.each do |outline|
+      - @outlines.each_with_index do |outline, index|
         %tr
-          %td=(current_user.outlines.count)
+          / %td=index += 1
           %td=(outline.created_at).strftime("%b %d")
           %td= outline.title
           %td= link_to 'Read', outline_path(outline)
