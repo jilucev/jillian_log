@@ -1,6 +1,6 @@
 .page-container
   -if current_user
-    %h1 create a new #{current_user.name} log
+    %h1#title create a new #{current_user.name} log
 
   / %span stealth mode
   / =# check_box_tag('work-mode', value = '1', checked = false, :onclick => "$('#outlines-form').toggleClass('outlines-form outlines-form-discreet')")
@@ -13,5 +13,7 @@
   $(document).ready(function(){
     $('#stealth-button').click(function(){
         $('#outlines-form').toggleClass("outlines-form outlines-form-discreet");
+        $('#title').hide();
+        $('.form-label').hide();
     });
   });

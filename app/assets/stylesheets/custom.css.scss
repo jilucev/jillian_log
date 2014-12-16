@@ -29,10 +29,13 @@ input {
 .outlines-form-discreet {
   textarea {
     padding: 0px;
-    height: 50px;
-    width: 150px;
-    font-size: .7em;
-    color: $mediumGray;
+    height: 230px;
+    width: 250px;
+    font-size: 1.5em;
+    color: $lightGray;
+  }
+  h1 {
+    visibility: hidden;
   }
 }
 
