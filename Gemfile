@@ -1,4 +1,4 @@
-ruby "2.1.5"
+ruby "2.2.0"
 source 'https://rubygems.org'
 
 
@@ -51,4 +51,3 @@ gem 'rails_12factor', group: :production
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
