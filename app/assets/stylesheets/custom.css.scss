@@ -105,25 +105,25 @@ a {
       color: white;
   }
   }
-  #show-stealth-button {
-    border: none;
-    background-color: $lightGray;
-    color: rgba(0,0,0,0.6);
-    text-shadow: none;
-    margin-bottom: 15px;
-    text-decoration: none;
-    font-family: "AtlasTypewriterRegular",
-               "Andale Mono",
-               "Consolas",
-               "Lucida Console",
-               "Menlo",
-               "Luxi Mono";
-    padding: 18px;
-    font-size: 1em;
-    &:hover {
-      background-color: black;
-      color: white;
-  }
+    #show-stealth-button {
+      border: none;
+      background-color: $lightGray;
+      color: rgba(0,0,0,0.6);
+      text-shadow: none;
+      margin-bottom: 15px;
+      text-decoration: none;
+      font-family: "AtlasTypewriterRegular",
+                 "Andale Mono",
+                 "Consolas",
+                 "Lucida Console",
+                 "Menlo",
+                 "Luxi Mono";
+      padding: 18px;
+      font-size: 1em;
+      &:hover {
+        background-color: black;
+        color: white;
+    }
   }
 
   .button-hide {
@@ -213,4 +213,28 @@ font-family: "AtlasTypewriterRegular",
   color: $lightGray;
 }
 
+#signin-page {
+  margin-top: 59px;
+  font-family: "AtlasTypewriterRegular",
+           "Andale Mono",
+           "Consolas",
+           "Lucida Console",
+           "Menlo",
+           "Luxi Mono";
+  .form-group {
+    margin-top: 30px;
+    height: 30px;
+    width: 50px;
+  }
+  input {
+    margin-top: 5px;
+  }
+  .signin-button {
+  @extend #stealth-button;
+  }
+  .signup-row {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+}
 
