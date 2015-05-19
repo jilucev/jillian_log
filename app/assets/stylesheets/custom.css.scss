@@ -11,47 +11,61 @@ $indigo: #e8eaf6;
 $amber: #fff8e1;
 $lavender: #f3e5f5;
 $rose: #fce4ec;
+$cinnamon: #efebe9;
+$yellow: #fffde7;
+$leaf: #f1f8e9;
+$ocean: #e1f5fe;
 
 $orangeDark: #ffccbc;
 $indigoDark: #c5cae9;
 $amberDark: #ffecb3;
 $lavenderDark: #e1bee7;
 $roseDark: #f8bbd0;
+$cinnamonDark: #d7ccc8;
+$yellowDark: #fff9c4;
+$leafDark: #dcedc8;
+$oceanDark: #b3e5fc;
 
-.orange {
+[value='orange'] {
   background-color: $orange;
-  // &:hover {
-  //   background-color: $orangeDark;
-  // }
 }
-.indigo {
+
+[value='indigo'] {
   background-color: $indigo;
-  //   &:hover {
-  //   background-color: $indigoDark;
-  // }
 }
-.amber {
+
+[value='amber'] {
   background-color: $amber;
-  //   &:hover {
-  //   background-color: $amberDark;
-  // }
 }
-.lavender {
+
+[value='lavender'] {
   background-color: $lavender;
-  //   &:hover {
-  //   background-color: $lavenderDark;
-  // }
 }
-.rose {
+
+[value='rose'] {
   background-color: $rose;
-  //   &:hover {
-  //   background-color: $roseDark;
-  // }
+}
+
+[value='cinnamon'] {
+  background-color: $cinnamon;
+}
+
+[value='yellow'] {
+  background-color: $yellow;
+}
+
+[value='leaf'] {
+  background-color: $leaf;
+}
+
+[value='ocean'] {
+  background-color: $ocean;
 }
 
 .colors-container {
-  height: 300px;
-  width: 300px;
+  height: 270px;
+  width: 270px;
+  margin-left: 50px;
   .box {
     height: 60px;
     width: 60px;
