@@ -25,7 +25,8 @@
 
   $(document).ready(function(){
     $('.box').click(function(){
-      console.log(this);
+      var $clickedBox = $(this);
+      console.log($clickedBox.attr('value'));
       //POST color to user
     });
   });
