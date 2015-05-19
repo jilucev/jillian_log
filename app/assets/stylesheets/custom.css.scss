@@ -1,11 +1,82 @@
 $lightGray: #f1f1f1;
 $mediumGray: #C3C3C7;
+$defaultFont: "AtlasTypewriterRegular",
+              "Andale Mono",
+              "Consolas",
+              "Lucida Console",
+              "Menlo",
+              "Luxi Mono";
+$orange: #fbe9e7;
+$indigo: #e8eaf6;
+$amber: #fff8e1;
+$lavender: #f3e5f5;
+$rose: #fce4ec;
+
+$orangeDark: #ffccbc;
+$indigoDark: #c5cae9;
+$amberDark: #ffecb3;
+$lavenderDark: #e1bee7;
+$roseDark: #f8bbd0;
+
+.orange {
+  background-color: $orange;
+  // &:hover {
+  //   background-color: $orangeDark;
+  // }
+}
+.indigo {
+  background-color: $indigo;
+  //   &:hover {
+  //   background-color: $indigoDark;
+  // }
+}
+.amber {
+  background-color: $amber;
+  //   &:hover {
+  //   background-color: $amberDark;
+  // }
+}
+.lavender {
+  background-color: $lavender;
+  //   &:hover {
+  //   background-color: $lavenderDark;
+  // }
+}
+.rose {
+  background-color: $rose;
+  //   &:hover {
+  //   background-color: $roseDark;
+  // }
+}
+
+.colors-container {
+  height: 300px;
+  width: 300px;
+  .box {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    float: left;
+    margin: 5px;
+  }
+}
 
 textarea {
   height: 300px;
   width: 850px;
   padding: 15px;
   font-size: 1em;
+  line-height: 30px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+.uneditable-input:focus {   
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+  background-color: $orange;
 }
 
 th {
@@ -67,12 +138,7 @@ a {
   color: rgba(0,0,0,0.6);
   text-shadow: none;
   text-decoration: none;
-  font-family: "AtlasTypewriterRegular",
-             "Andale Mono",
-             "Consolas",
-             "Lucida Console",
-             "Menlo",
-             "Luxi Mono";
+  font-family: $defaultFont;
   margin-bottom: 32px;
   padding: 18px;
   font-size: 1em;
@@ -91,12 +157,7 @@ a {
     color: rgba(0,0,0,0.6);
     text-shadow: none;
     text-decoration: none;
-    font-family: "AtlasTypewriterRegular",
-               "Andale Mono",
-               "Consolas",
-               "Lucida Console",
-               "Menlo",
-               "Luxi Mono";
+    font-family: $defaultFont;
     margin-bottom: 32px;
     padding: 18px;
     font-size: 1em;
@@ -112,12 +173,7 @@ a {
       text-shadow: none;
       margin-bottom: 15px;
       text-decoration: none;
-      font-family: "AtlasTypewriterRegular",
-                 "Andale Mono",
-                 "Consolas",
-                 "Lucida Console",
-                 "Menlo",
-                 "Luxi Mono";
+      font-family: $defaultFont;
       padding: 18px;
       font-size: 1em;
       &:hover {
@@ -136,12 +192,7 @@ td {
 }
 
 p, h1, h2, h3, h4, td, th, a, textarea {
-font-family: "AtlasTypewriterRegular",
-             "Andale Mono",
-             "Consolas",
-             "Lucida Console",
-             "Menlo",
-             "Luxi Mono";
+font-family: $defaultFont;
 }
 
 .navbar {
@@ -215,12 +266,7 @@ font-family: "AtlasTypewriterRegular",
 
 #signin-page {
   margin-top: 59px;
-  font-family: "AtlasTypewriterRegular",
-           "Andale Mono",
-           "Consolas",
-           "Lucida Console",
-           "Menlo",
-           "Luxi Mono";
+  font-family: $defaultFont;
   .form-group {
     margin-top: 30px;
     height: 30px;
@@ -237,4 +283,14 @@ font-family: "AtlasTypewriterRegular",
     margin-top: 20px;
   }
 }
+
+#title-input {
+  font-size: 32px;
+  font-family: $defaultFont;
+  height: 30px;
+  width: 871px;
+  border: none;
+}
+
+
 

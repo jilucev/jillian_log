@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @abc = "this is the alphabet"
+    @current_color = current_user.color
   end
 
   def help

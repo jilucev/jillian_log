@@ -2,8 +2,26 @@
   %h1.home-header
     - if current_user
       Welcome to your logs, #{current_user.name}
+      %h3 Your current color is: #{@current_color}
+
+  .colors-container
+    .box.orange
+    .box.indigo
+    .box.amber
+    .box.lavender
+    .box.rose
+
   .home-dashboard
     = link_to "Sign up", signup_path, class: "home-signup-btn"
     = link_to "Write", new_outline_path, class: "home-new-link"
     - if current_user
       = link_to "Read", outlines_path, class: "home-index-link"
+
+:javascript
+
+  $(document).ready(function(){
+    $('.box').click(function(){
+      console.log('box');
+      //POST color to user
+    });
+  });

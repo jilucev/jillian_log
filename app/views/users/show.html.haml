@@ -2,3 +2,7 @@
   %h1 hey, #{@username}
   =link_to 'see your writings', outlines_path
   =link_to "Sign out", signout_path, method: "delete"
+
+  .colors-container
+  %h3 Show your colors:
+    = select_tag :color, options_for_select([['orange', 'orange'], ['indigo', 'indigo']], params[:color])

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :set_username
   # before_action :set_user
   #by default, filters apply to every action in a controller,
-  # so we restrict the filter to act only on the edit and update actions 
+  # so we restrict the filter to act only on the edit and update actions
   # by passing the appropriate only options hash
 
   def index
@@ -51,8 +51,8 @@ class UsersController < ApplicationController
       #we can omit the user_url in the redirect.
     else
       render 'new'
-      #it doesn't make sense for a view to correspond 
-      #to a post request, such as create. We therefore redirect to 'new', which will GET the 
+      #it doesn't make sense for a view to correspond
+      #to a post request, such as create. We therefore redirect to 'new', which will GET the
       # view corresponding to they newly created user. Chha.
     end
   end
@@ -68,29 +68,29 @@ class UsersController < ApplicationController
 
   private
 
-    # def set_user
-    #   @user = User.find(params[:id])
-    # end
+  # def set_user
+  #   @user = User.find(params[:id])
+  # end
 
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
 
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :color)
+  end
 
-    def set_username
-      if @user
+  def set_username
+    if @user
       @user = User.find(params[:id])
       @username = @user.name
-      end
     end
-    #note that admin is not a permitted attribute. This is what prevents users from
-    #assigning themselves admin status.
+  end
+  #note that admin is not a permitted attribute. This is what prevents users from
+  #assigning themselves admin status.
 end
