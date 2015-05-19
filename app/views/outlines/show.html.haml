@@ -12,13 +12,12 @@
     - if current_user
       =link_to "Back", outlines_path, class: 'show-logs-index'
 
-
 :javascript
 
   $(document).ready(function(){
     $('#show-stealth-button').click(function(){
-        $('#outline-log').toggleClass("outline-log outline-log-discreet");
-        $('#title').hide();
         $('.form-label').hide();
+        $('#outline-log, .outline-title, .created').
+        toggleClass("outline-log outline-log-discreet");
     });
   });
