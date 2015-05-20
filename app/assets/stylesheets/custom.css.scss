@@ -26,6 +26,115 @@ $yellowDark: #fff9c4;
 $leafDark: #dcedc8;
 $oceanDark: #b3e5fc;
 
+  #title-input.orange {
+    &:focus {
+      background-color: $orange;
+    }
+  }
+
+  #log.orange {
+    &:focus {
+      background-color: $orange;
+    }
+  }
+
+  #title-input.indigo {
+    &:focus {
+      background-color: $indigo;
+    }
+  }
+
+  #log.indigo {
+    &:focus {
+      background-color: $indigo;
+    }
+  }
+
+  #title-input.amber {
+    &:focus {
+      background-color: $amber;
+    }
+  }
+
+  #log.amber {
+    &:focus {
+      background-color: $amber;
+    }
+  }
+
+  #title-input.lavender {
+    &:focus {
+      background-color: $lavender;
+    }
+  }
+
+  #log.lavender {
+    &:focus {
+      background-color: $lavender;
+    }
+  }
+
+  #title-input.rose {
+    &:focus {
+      background-color: $rose;
+    }
+  }
+
+  #log.rose {
+    &:focus {
+      background-color: $rose;
+    }
+  }
+
+  #title-input.cinnamon {
+    &:focus {
+      background-color: $cinnamon;
+    }
+  }
+
+  #log.cinnamon {
+    &:focus {
+      background-color: $cinnamon;
+    }
+  }
+
+  #title-input.yellow {
+    &:focus {
+      background-color: $yellow;
+    }
+  }
+
+  #log.yellow {
+    &:focus {
+      background-color: $yellow;
+    }
+  }
+
+  #title-input.leaf {
+    &:focus {
+      background-color: $leaf;
+    }
+  }
+
+  #log.leaf {
+    &:focus {
+      background-color: $leaf;
+    }
+  }
+
+#title-input.ocean {
+  &:focus {
+    background-color: $ocean;
+  }
+}
+
+#log.ocean {
+  &:focus {
+    background-color: $ocean;
+  }
+}
+
+
 [value='orange'] {
   background-color: $orange;
 }
@@ -81,6 +190,7 @@ textarea {
   padding: 15px;
   font-size: 1em;
   line-height: 30px;
+  border: none;
 }
 
 textarea:focus,
@@ -90,7 +200,7 @@ input[type="password"]:focus,
   border-color: none;
   box-shadow: none;
   outline: 0 none;
-  background-color: $orange;
+  background-color: white;
 }
 
 th {

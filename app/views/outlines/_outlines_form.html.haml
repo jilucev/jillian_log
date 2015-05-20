@@ -7,10 +7,18 @@
     %p.form-label
       = f.label :title, id: "title-label"
     %p.form-input
-      = f.text_field :title, placeholder: 'Title', id: "title-input"
+      = f.text_field :title, id: "title-input"
     %p.form-label
       = f.label :log
     %p.form-input
-      = f.text_area :log
+      = f.text_area :log, id: "log"
     %br
       = f.submit "Save", id: 'save-button'
+
+
+:javascript
+  $(document).ready(function(){
+  var userColor = "#{current_user.color}";
+  $('#title-input').addClass(userColor);
+  $('#log').addClass(userColor);
+  });
