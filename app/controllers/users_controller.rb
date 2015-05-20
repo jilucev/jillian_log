@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
   before_action :set_username
@@ -7,6 +6,8 @@ class UsersController < ApplicationController
   #by default, filters apply to every action in a controller,
   # so we restrict the filter to act only on the edit and update actions
   # by passing the appropriate only options hash
+
+  respond_to :html, :json
 
   def index
     @user = set_username
@@ -22,16 +23,19 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-
   def edit
   end
 
   def update
-    if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
-      redirect_to @user
-    else
-      render 'edit'
+    respond_to do |format|
+      if @user.update(user_params)
+        flash[:success] = "Profile updated"
+        format.html {render :show}
+        format.json {render :show}
+      else
+        format.html { render :edit}
+        format.json { render :show}
+      end
     end
   end
 
@@ -57,9 +61,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-  end
-
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
@@ -78,7 +79,7 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+    redirect_to(root_url) unless current_user == @user
   end
 
   def user_params

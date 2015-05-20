@@ -26,7 +26,18 @@
   $(document).ready(function(){
     $('.box').click(function(){
       var $clickedBox = $(this);
-      console.log($clickedBox.attr('value'));
-      //POST color to user
+      var chosenColor = $clickedBox.attr('value');
+      var updatePath = "#{user_path(current_user)}";
+      console.log('chosenColor', chosenColor);
+      console.log('updatePath', updatePath);
+        $.ajax({
+        method: "PUT",
+        url: updatePath,
+        data: { 'user': {'color': 'chosenColor' } },
+        dataType: 'JSON'
+        })
+        .success(function() {
+          console.log('done');
+        });
     });
   });
