@@ -26,6 +26,10 @@ $yellowDark: #fff9c4;
 $leafDark: #dcedc8;
 $oceanDark: #b3e5fc;
 
+  #title-label {
+    margin-top: 15px;
+  }
+
   #title-input.orange {
     &:focus {
       background-color: $orange;
