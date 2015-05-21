@@ -41,7 +41,6 @@ $oceanDark: #b3e5fc;
   .pagination-wrapper {
     text-align: center;
     margin-top: 45px;
-
   }
 
   tr.outlines {
@@ -125,13 +124,13 @@ $oceanDark: #b3e5fc;
     }
   }
 
-  #title-input.yellow {
+  #title-input.white {
     &:focus {
       background-color: $yellow;
     }
   }
 
-  #log.yellow {
+  #log.white {
     &:focus {
       background-color: $yellow;
     }
@@ -186,8 +185,8 @@ $oceanDark: #b3e5fc;
   background-color: $cinnamon;
 }
 
-[value='yellow'] {
-  background-color: $yellow;
+[value='white'] {
+  background-color: white;
 }
 
 [value='leaf'] {
