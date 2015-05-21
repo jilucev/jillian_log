@@ -26,6 +26,23 @@ $yellowDark: #fff9c4;
 $leafDark: #dcedc8;
 $oceanDark: #b3e5fc;
 
+  #outlines-new-page,
+  #outlines-edit-page,
+  #outlines-index-page,
+  #outlines-show-page {
+    padding-left: 30px;
+  }
+
+  .pagination-wrapper {
+    text-align: center;
+    margin-top: 45px;
+
+  }
+
+  tr.outlines {
+    margin-top: 45px;
+  }
+
   #title-label {
     margin-top: 15px;
   }

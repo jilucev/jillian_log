@@ -3,7 +3,7 @@
 
 / #work-mode-div
 / =# check_box_tag('work-mode', value = '1', checked = false, :onclick => "$('#work-mode-div').toggle()")
-.page-container-index
+.page-container-index#outlines-index-page
   %i.fa.fa-bicycle
   %table.index-table-head
     %tr
@@ -13,7 +13,7 @@
 
         #{current_user.name} logs, [#{current_user.outlines.count}]
         / last updated =time_ago_in_words(@outline.last.created_at)
-    %tr
+    %tr.outlines
       - @outlines.each_with_index do |outline, index|
         %tr
           / %td=index += 1
@@ -23,3 +23,6 @@
           %td= link_to 'Tweak', edit_outline_path(outline)
           %td= link_to 'Destroy', outline_path(outline),
                       method: :delete, data: {confirm: "Are you sure you want to delete this #{current_user.name} log?"}
+
+  .pagination-wrapper
+    = paginate @outlines

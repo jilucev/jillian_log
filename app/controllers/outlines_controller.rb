@@ -1,7 +1,6 @@
 class OutlinesController < ApplicationController
   def index
-    @outlines = current_user.outlines
-    # @outlines = Outline.all
+    @outlines = current_user.outlines.page(params[:page])
   end
 
   def new
