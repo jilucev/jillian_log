@@ -29,8 +29,13 @@ $oceanDark: #b3e5fc;
   #outlines-new-page,
   #outlines-edit-page,
   #outlines-index-page,
-  #outlines-show-page {
+  #outlines-show-page,
+  #home-page {
     padding-left: 30px;
+  }
+
+  #home-page .home-dashboard {
+    margin-top: 0;
   }
 
   .pagination-wrapper {
@@ -40,7 +45,8 @@ $oceanDark: #b3e5fc;
   }
 
   tr.outlines {
-    margin-top: 45px;
+    padding-top: 65px;
+    height: 5px;
   }
 
   #title-label {
